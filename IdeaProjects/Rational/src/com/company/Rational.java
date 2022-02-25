@@ -4,21 +4,21 @@ import java.util.Objects;
 
 public class Rational {
 
-    float p1;
-    float p2;
+    float numerator;
+    float denominator;
     // constructor
-    public Rational(float p1, float p2) {
-        this.p1 = p1;
-        this.p2 = p2;
+    public Rational(float numerator, float denominator) {
+        this.numerator = numerator;
+        this.denominator = denominator;
     }
 
     // getters
-    public float getP1() {
-        return p1;
+    public float getNumerator() {
+        return numerator;
     }
 
-    public float getP2() {
-        return p2;
+    public float getDenominator() {
+        return denominator;
     }
 
     // equals() method to check two Rational is equal or not
@@ -26,16 +26,16 @@ public class Rational {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rational rational = (Rational) o;
-        return Float.compare(rational.p1, p1) == 0 && Float.compare(rational.p2, p2) == 0;
+        return Float.compare(rational.numerator, numerator) == 0 && Float.compare(rational.denominator, denominator) == 0;
     }
 
     public int hashCode() {
-        return Objects.hash(p1, p2);
+        return Objects.hash(numerator, denominator);
     }
 
     // doubleValue() method to return of the getter
     public double doubleValue(){
-        return getP1();
+        return getNumerator();
     }
 
     // Driver code
