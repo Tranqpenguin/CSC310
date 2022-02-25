@@ -29,6 +29,9 @@ class Rational:
         else:
             return False
 
+    def as_float(self) -> float:
+        return self._num1 / self._num2
+
 
 rational12 = Rational(1, 2)
 rational23 = Rational(2, 3)
