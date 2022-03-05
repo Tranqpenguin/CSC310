@@ -4,8 +4,9 @@ import java.util.Objects;
 
 public class Rational {
 
-    float numerator;
-    float denominator;
+    private float numerator;
+    private float denominator;
+
     // constructor
     public Rational(float numerator, float denominator) {
         this.numerator = numerator;
@@ -21,7 +22,15 @@ public class Rational {
         return denominator;
     }
 
-    // equals() method to check two Rational is equal or not
+    /**
+     * Indicates whether some other object is "equal to" this one.
+     *
+     * The equals method implements an equivalence relation on non-null object references
+     *
+     * @param an object
+     * @return true if numerators and denominators are the same
+     */
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

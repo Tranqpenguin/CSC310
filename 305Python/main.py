@@ -8,22 +8,22 @@ class Rational:
         self._num1: float = numerator
         self._num2: float = denominator
 
-    def getP1(self) -> float:
+    def getNumerator(self) -> float:
         return self._num1
 
-    def getQ1(self) -> float:
+    def getDenominator(self) -> float:
         return self._num2
 
     def equals(self, rational: "Rational") -> bool:
         """
 
         :param rational:
-        :return:
+        :return true if numerators and denominators are the same:
         """
-        p2 = rational.getP1()
-        q2 = rational.getQ1()
-        a = Rational.getP1(self) * q2
-        b = Rational.getQ1(self) * p2
+        numerator2 = rational.getNumerator()
+        denominator2 = rational.getDenominator()
+        a = Rational.getNumerator(self) * denominator2
+        b = Rational.getDenominator(self) * numerator2
         if a == b:
             return True
         else:
