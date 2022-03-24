@@ -9,6 +9,11 @@ public class Rational {
 
     // constructor
     public Rational(float numerator, float denominator) {
+        if (denominator == 0) {
+
+            throw new IllegalArgumentException("Denominator cannot be zero");
+
+        }
         this.numerator = numerator;
         this.denominator = denominator;
     }
